@@ -19,7 +19,7 @@
         android:layout_marginBottom="54dp"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/ic_google_icon"
-        android:text="SIgn in to GOOGLE"
+        android:text="SIgn in using GOOGLE"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/phoneButton"
         app:layout_constraintEnd_toEndOf="parent"

@@ -39,10 +39,12 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     val intent1 = Intent(this, SignInActivity::class.java)
                     startActivity(intent1)
+                    finish()
                 }
             }
             register.setOnClickListener {
                 startActivity(Intent(this, RegistrationActivity::class.java))
+                finish()
 
             }
             login.setOnClickListener {
@@ -56,15 +58,15 @@ class MainActivity : AppCompatActivity() {
             }
             phone.setOnClickListener {
                 if (user != null) {
-                    startActivity(Intent(this, ProfileActivity::class.java))
+                    startActivity(Intent(this, Phone_Profile::class.java))
                     finish()
                 } else {
-                    startActivity(Intent(this, LoginActivity::class.java))
+                    startActivity(Intent(this, PhoneActivity::class.java))
                     finish()
                 }
 
             }
-        }, 6000)
+        }, 2000)
 
     }
 }
