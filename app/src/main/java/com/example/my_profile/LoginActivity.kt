@@ -42,8 +42,8 @@ class LoginActivity : AppCompatActivity() {
 
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this){ task ->
                     if(task.isSuccessful) {
-                        startActivity(Intent(this, ProfileActivity::class.java))
                         Toast.makeText(this, "Login Success! ", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this, ProfileActivity::class.java))
                         finish()
                     } else {
                         Toast.makeText(this, "Login failed, please try again! ", Toast.LENGTH_LONG).show()
