@@ -43,7 +43,7 @@ class ProfileActivity : AppCompatActivity() {
         userreference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 dispTxt.text = "Name: "+snapshot.child("Name").value.toString()
-                emailt.text = "Email address: "+snapshot.child("Email").value.toString()
+                emailt.text = "Email : "+snapshot.child("Email").value.toString()
             }
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
