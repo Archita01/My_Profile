@@ -13,7 +13,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login2)
+        setContentView(R.layout.activity_sign_in)
         val login = findViewById<Button>(R.id.loginButton)
         mAuth = FirebaseAuth.getInstance()
         login.setOnClickListener {
