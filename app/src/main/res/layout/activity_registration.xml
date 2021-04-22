@@ -63,7 +63,7 @@
             android:id="@+id/usernameInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:fontFamily="monospace"
             android:textColor="@color/white"
             />
@@ -89,7 +89,7 @@
             android:id="@+id/passwordInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:fontFamily="monospace"
             android:textColor="@color/white"
             />

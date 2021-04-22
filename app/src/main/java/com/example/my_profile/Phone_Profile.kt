@@ -21,7 +21,7 @@ class Phone_Profile : AppCompatActivity() {
         val num : TextView = findViewById(R.id.number)
         val out : Button = findViewById(R.id.Out)
 
-        num.text = "Phone number is: "+ mAuth?.currentUser?.phoneNumber.toString()
+        num.text = mAuth?.currentUser?.phoneNumber.toString()
         out.setOnClickListener {
             mAuth!!.signOut()
             val intent = Intent(this, SignInActivity::class.java)
