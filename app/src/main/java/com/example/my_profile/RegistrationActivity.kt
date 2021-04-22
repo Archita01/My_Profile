@@ -68,7 +68,7 @@ class RegistrationActivity : AppCompatActivity() {
                     dat.child("Name").setValue(nam)
                     dat.child("Email").setValue(emai)
                     Toast.makeText(this@RegistrationActivity, "Registration Success. ", Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this,SignInActivity::class.java))
                     finish()
 
                 } else {

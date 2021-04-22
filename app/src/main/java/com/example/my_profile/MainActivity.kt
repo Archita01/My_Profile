@@ -20,55 +20,13 @@ import com.google.firebase.ktx.Firebase
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
-    private lateinit var mAuth: FirebaseAuth
-    private lateinit var googleSignIn: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mAuth = FirebaseAuth.getInstance()
-        val user = mAuth.currentUser
         setContentView(R.layout.activity_main)
         Handler().postDelayed({
-            setContentView(R.layout.activity_sign_in)
-            googleSignIn = findViewById(R.id.button1)
-            val login = findViewById<Button>(R.id.loginButton)
-            val register = findViewById<TextView>(R.id.registerText)
-            val phone = findViewById<ImageView>(R.id.phoneButton)
-            googleSignIn.setOnClickListener {
-                if (user != null) {
-                    val dashboardIntent = Intent(this, Dashboard::class.java)
-                    startActivity(dashboardIntent)
-                    finish()
-                } else {
-                    val intent1 = Intent(this, SignInActivity::class.java)
-                    startActivity(intent1)
-                    finish()
-                }
-            }
-            register.setOnClickListener {
-                startActivity(Intent(this, RegistrationActivity::class.java))
-                finish()
-
-            }
-            login.setOnClickListener {
-                if (user != null) {
-                    startActivity(Intent(this, ProfileActivity::class.java))
-                    finish()
-                } else {
-                    startActivity(Intent(this, LoginActivity::class.java))
-                    finish()
-                }
-            }
-            phone.setOnClickListener {
-                if (user != null) {
-                    startActivity(Intent(this, Phone_Profile::class.java))
-                    finish()
-                } else {
-                    startActivity(Intent(this, PhoneActivity::class.java))
-                    finish()
-                }
-
-            }
+            startActivity(Intent(this, SignInActivity::class.java))
+            finish()
         }, 2000)
 
     }

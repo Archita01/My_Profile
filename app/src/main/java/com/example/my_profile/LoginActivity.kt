@@ -18,39 +18,11 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         login.setOnClickListener {
 
-            val emailTxt = findViewById<EditText>(R.id.usernameInput)
-            val passwordTxt = findViewById<EditText>(R.id.passwordInput)
-            val email = emailTxt.text.toString()
-            val password = passwordTxt.text.toString()
-            if(email.isEmpty() )
-            {
-                emailTxt.error="Please enter valid email!"
-                return@setOnClickListener
-            }
-            if(password.isEmpty() )
-            {
-                passwordTxt.error="Please enter valid password!"
-                return@setOnClickListener
-            }
-            login(email,password)
+
         }
     }
 
-        private fun login(email : String,password : String) {
 
-
-
-            mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this){ task ->
-                    if(task.isSuccessful) {
-                        Toast.makeText(this, "Login Success! ", Toast.LENGTH_LONG).show()
-                        startActivity(Intent(this, ProfileActivity::class.java))
-                        finish()
-                    } else {
-                        Toast.makeText(this, "Login failed, please try again! ", Toast.LENGTH_LONG).show()
-                    }
-                }
-
-            }
 
 
 
