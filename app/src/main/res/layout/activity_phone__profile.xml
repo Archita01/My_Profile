@@ -1,69 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/starry"
-    tools:context=".Phone_Profile">
+    android:background="@color/black"
+    >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="Profile"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_person"
+        app:tint="@color/primary"
+        android:layout_below="@+id/textView1"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number : "
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="50dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/profile_image"/>
 
     <TextView
         android:id="@+id/number"
-        android:layout_width="321dp"
-        android:layout_height="93dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="140dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:paddingLeft="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:text="+911234567897"
         android:textColor="@color/white"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:textSize="30sp"
+        android:layout_below="@+id/textView4"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/Out"
-        android:layout_width="196dp"
-        android:layout_height="49dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="327dp"
-        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="monospace"
+        android:padding="12dp"
         android:text="Sign Out"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/number"
-        app:layout_constraintTop_toBottomOf="@+id/number"
-        app:layout_constraintVertical_bias="0.582" />
+        android:letterSpacing="0"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_below="@+id/number"
+        android:backgroundTint="@color/primary"
+        />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="217dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/number"
-        app:srcCompat="@drawable/rick" />
+        android:layout_width="200dp"
+        android:layout_height="210dp"
+        android:layout_below="@id/Out"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rick" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="157dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="57dp"
-        android:layout_marginEnd="109dp"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="Profile"
-        android:textColor="@color/white"
-        android:textSize="55dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/number"
-        app:layout_constraintEnd_toEndOf="@+id/number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

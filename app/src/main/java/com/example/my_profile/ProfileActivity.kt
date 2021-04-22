@@ -42,8 +42,8 @@ class ProfileActivity : AppCompatActivity() {
         val emailt = findViewById<TextView>(R.id.emailText)
         userreference.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                dispTxt.text = "Name: "+snapshot.child("Name").value.toString()
-                emailt.text = "Email : "+snapshot.child("Email").value.toString()
+                dispTxt.text = snapshot.child("Name").value.toString()
+                emailt.text = snapshot.child("Email").value.toString()
             }
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")

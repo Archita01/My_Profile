@@ -1,67 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/starry"
-    tools:context=".Verification">
-
-    <EditText
-        android:id="@+id/codeInput"
-        android:layout_width="241dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="32dp"
-        android:hint="Enter OTP"
-        android:paddingLeft="40dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <Button
-        android:id="@+id/verifyCode"
-        android:layout_width="191dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="189dp"
-        android:backgroundTint="@color/white"
-        android:text="Verify Otp "
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".PhoneActivity">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="296dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="105dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="OTP Verification"
-        android:paddingLeft="40dp"
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_margin="40dp"
+        android:layout_gravity="center"
         android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/verifyCode"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="60dp"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="40dp"
+        android:hint="OTP"
+        android:layout_marginBottom="15dp"
+        app:background="@color/white"
+        android:textColorHint="@color/white"
+        app:boxStrokeColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/codeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:inputType="phone"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/verifyCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:fontFamily="monospace"
+        android:padding="12dp"
+        android:text="Verify OTP"
+        android:letterSpacing="0"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:backgroundTint="@color/primary"
+        />
+
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="141dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginBottom="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/verifyCode"
-        app:layout_constraintTop_toBottomOf="@+id/codeInput"
-        app:srcCompat="@drawable/rick" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="end"
+        android:adjustViewBounds="true"
+        android:src="@drawable/rick" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
