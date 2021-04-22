@@ -48,6 +48,7 @@ class PhoneActivity : AppCompatActivity() {
                 val intent = Intent(this@PhoneActivity, Verification::class.java)
                 intent.putExtra("code",p0)
                 startActivity(intent)
+
             }
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
 

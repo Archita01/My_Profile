@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -26,7 +27,7 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mAuth = FirebaseAuth.getInstance()
         setContentView(R.layout.activity_sign_in)
-        val button = findViewById<Button>(R.id.button1)
+        val button = findViewById<ImageView>(R.id.button1)
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()

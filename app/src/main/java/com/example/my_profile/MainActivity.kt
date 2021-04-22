@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
@@ -20,7 +21,7 @@ import com.google.firebase.ktx.Firebase
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
-    private lateinit var googleSignIn: Button
+    private lateinit var googleSignIn: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
             googleSignIn = findViewById(R.id.button1)
             val login = findViewById<Button>(R.id.loginButton)
             val register = findViewById<TextView>(R.id.registerText)
-            val phone = findViewById<Button>(R.id.phoneButton)
+            val phone = findViewById<ImageView>(R.id.phoneButton)
             googleSignIn.setOnClickListener {
                 if (user != null) {
                     val dashboardIntent = Intent(this, Dashboard::class.java)
