@@ -20,6 +20,8 @@ import com.google.firebase.ktx.Firebase
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var googleSignIn: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mAuth = FirebaseAuth.getInstance()
@@ -27,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         Handler().postDelayed({
             setContentView(R.layout.activity_sign_in)
-            val googleSignIn = findViewById<Button>(R.id.button1)
+            googleSignIn = findViewById(R.id.button1)
             val login = findViewById<Button>(R.id.loginButton)
             val register = findViewById<TextView>(R.id.registerText)
             val phone = findViewById<Button>(R.id.phoneButton)
